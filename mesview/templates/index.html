@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='vendors/bootstrap.min.css')}}">
+    <script src="{{url_for('static',filename='vendors/jquery.min.js')}}"></script>
+    <script src="{{url_for('static',filename='vendors/bootstrap.min.js')}}"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background: #00008B;
+        }
+
+        .mesheader{
+       line-height:70px;
+       margin:0px;
+       color:#FFFFFF;
+       background:url({{url_for('static', filename='images/headerbg.png')}}) repeat-x;
+       -moz-background-size:100% 100%; background-size:100% 100%;
+       border-bottom:3px solid #000;
+   }
+   .mesleft{
+       color:#FFFFFF;
+   }
+   .mesleft h2{
+       padding-top: 10px;
+   }
+   .mesright{
+       color:#FFFFFF;margin:0px;
+   }
+   .mesright div h3{
+       margin:0;
+   }
+   .mesline{
+       height:93px;
+       padding:0;
+       text-align:center;
+       border-bottom:2px solid #00FFFF
+   }
+        .col-lg-8,.col-lg-4,.col-xs-12,.col-xs-6{
+            padding:0;
+        }
+         .mesbackground{
+            background:url({{url_for('static', filename='images/shuju1.png')}});
+            height:23px;
+            margin: 15px auto;
+            padding: 0 10px;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+   </style>
+</head>
+<body>
+   <div class="container-fluid">
+       <div class="row">
+           <div class="col-lg-8" style="height:720px;">
+               <div class="col-xs-12"style="height: 70px">
+                   <h1  class=mesheader align="center">机床视频监控</h1>
+               </div>
+               <div class="col-xs-12" style="height:650px;">
+                   <img src="{{ url_for('video_feed') }}" width="100%">
+               </div>
+           </div>
+           <div class="col-lg-4" style="height:720px">
+               <div class="col-xs-12" style="height: 70px">
+                   <h1  class=mesheader align="center">机床数据采集</h1>
+               </div>
+               <div class="col-xs-12" style="height:650px;">
+                   <div class="col-xs-12 mesline">
+                       <div class="col-xs-6 mesleft">
+                           <h2 class="">网络状态</h2>
+                       </div>
+                       <div class="col-xs-6 mesright">
+                           <div class="col-xs-12 mesbackground"></div>
+                           <div class="col-xs-12" >
+                               <h3 style="color:#FF0000;">离线</h3>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-xs-12 mesline">
+                       <div class="col-xs-6 mesleft">
+                           <h2 class="mesleft"> ... </h2>
+                       </div>
+                       <div class="col-xs-6 mesright">
+                           <div class="col-xs-12" >
+                               <div class="col-xs-12 mesbackground"></div>
+                           </div>
+                           <div class="col-xs-12" >
+                               <h3 class="mesright"> ... </h3>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-xs-12 mesline">
+                       <div class="col-xs-6 mesleft">
+                           <h2 class="mesleft"> ... </h2>
+                       </div>
+                       <div class="col-xs-6 mesright">
+                           <div class="col-xs-12" >
+                               <div class="col-xs-12 mesbackground"></div>
+                           </div>
+                           <div class="col-xs-12" >
+                               <h3 class="mesright"> ... </h3>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-xs-12 mesline">
+                       <div class="col-xs-6 mesleft">
+                           <h2 class="mesleft"> ... </h2>
+                       </div>
+                       <div class="col-xs-6 mesright">
+                           <div class="col-xs-12" >
+                               <div class="col-xs-12 mesbackground"></div>
+                           </div>
+                           <div class="col-xs-12" >
+                               <h3 class="mesright"> ... </h3>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-xs-12 mesline">
+                       <div class="col-xs-6 mesleft">
+                           <h2 class="mesleft"> ... </h2>
+                       </div>
+                       <div class="col-xs-6 mesright">
+                           <div class="col-xs-12" >
+                               <div class="col-xs-12 mesbackground"></div>
+                           </div>
+                           <div class="col-xs-12" >
+                               <h3 class="mesright"> ... </h3>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-xs-12 mesline">
+                       <div class="col-xs-6 mesleft">
+                           <h2 class="mesleft"> ... </h2>
+                       </div>
+                       <div class="col-xs-6 mesright">
+                           <div class="col-xs-12" >
+                               <div class="col-xs-12 mesbackground"></div>
+                           </div>
+                           <div class="col-xs-12">
+                               <h3 class="mesright"> ... </h3>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-xs-12"style=" height:93px;padding:0;text-align:center;">
+                       <div class="col-xs-6">
+                           <h2 class="mesleft"> ... </h2>
+                       </div>
+                       <div class="col-xs-6">
+                           <div class="col-xs-12">
+                               <div class="col-xs-12 mesbackground"></div>
+                           </div>
+                           <div class="col-xs-12">
+                               <h2 class="mesright"> ... </h2>
+                           </div>
+                   </div>
+                   </div>
+               </div>
+           </div>
+           <div class="col-lg-8" style="height:360px">
+               <div class="col-xs-12"style="height: 70px">
+                   <h1  class=mesheader align="center">工位台物料信息</h1>
+               </div>
+               <div class="col-xs-12" style="height:290px">
+                   <div class="col-xs-12 mesline">
+                       <div class="col-xs-6 mesleft">
+                           <h2>1号工位台</h2>
+                       </div>
+                       <div class="col-xs-6 mesleft">
+                           <h2 >2号工位台</h2>
+                       </div>    
+                   </div>
+                   <div class="col-xs-12 mesline">
+                       <div class="col-xs-6 ">
+                           <div class="col-xs-6 mesleft">
+                               <h2 align="center">物料名称</h2>
+                           </div>
+                           <div class="col-xs-6 mesright">
+                               <div class="col-xs-12">
+                                   <div class="col-xs-12 mesbackground"></div>
+                               </div>
+                               <div class="col-xs-12">
+                                   <h3 class="mesright"> ... </h3>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="col-xs-6 ">
+                           <div class="col-xs-6 mesleft">
+                               <h2 align="center">物料名称</h2>
+                           </div>
+                           <div class="col-xs-6 mesright">
+                               <div class="col-xs-12">
+                                   <div class="col-xs-12 mesbackground"></div>
+                               </div>
+                               <div class="col-xs-12">
+                                   <h3 class="mesright"> ... </h3>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-xs-12style=">
+                       <div class="col-xs-6 ">
+                           <div class="col-xs-6 mesleft">
+                               <h2 align="center">RFID识别码</h2>
+                           </div>
+                           <div class="col-xs-6"style=" height:93px;padding:0px;text-align:center;">
+                               <div class="col-xs-12">
+                                   <div class="col-xs-12 mesbackground"></div>
+                               </div>
+                               <div class="col-xs-12">
+                                   <h3 class="mesright"> ... </h3>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="col-xs-6 ">
+                           <div class="col-xs-6 mesleft">
+                               <h2 align="center">RFID识别码</h2>
+                           </div>
+                           <div class="col-xs-6"style=" height:93px;padding:0px;text-align:center;">
+                               <div class="col-xs-12">
+                                   <div class="col-xs-12 mesbackground"></div>
+                               </div>
+                               <div class="col-xs-12">
+                                   <h3 class="mesright"> ... </h3>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <div class="col-lg-4" style="height:360px">
+               <div class="col-xs-12"style="height: 70px">
+                   <h1  class=mesheader align="center">机床数据采集</h1>
+               </div>
+               <div class="col-xs-12" style="height:290px">
+                   <div class="col-xs-12 mesline">
+                       <div class="col-xs-6 mesleft">
+                           <h2 class="mesleft"> ... </h2>
+                       </div>
+                       <div class="col-xs-6 mesright">
+                           <div class="col-xs-12">
+                               <div class="col-xs-12 mesbackground"></div>
+                           </div>
+                           <div class="col-xs-12">
+                               <h3 class="mesright"> ... </h3>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-xs-12 mesline">
+                       <div class="col-xs-6 mesleft">
+                           <h2 class="mesleft"> ... </h2>
+                       </div>
+                       <div class="col-xs-6 mesright">
+                           <div class="col-xs-12">
+                               <div class="col-xs-12 mesbackground"></div>
+                           </div>
+                           <div class="col-xs-12">
+                               <h3 class="mesright"> ... </h3>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-xs-12" style=" height:93px;padding:0px;text-align:center;">
+                       <div class="col-xs-6 mesleft">
+                           <h2 class=""> ... </h2>
+                       </div>
+                       <div class="col-xs-6" style=" height:93px;padding:0px;text-align:center;">
+                           <div class="col-xs-12">
+                               <div class="col-xs-12 mesbackground"></div>
+                           </div>
+                           <div class="col-xs-12">
+                               <h3 class="mesright"> ... </h3>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+</body>
+</html>
